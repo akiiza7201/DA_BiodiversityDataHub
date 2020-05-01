@@ -1,0 +1,23 @@
+@import "~leaflet/dist/leaflet.css";
+
+body, html {
+  height: 100%;
+  margin: 0 auto;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Helper */
+
+.h-display--flex {
+  display: flex;
+  flex-wrap: wrap;
+}

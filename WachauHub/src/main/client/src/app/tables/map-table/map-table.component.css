@@ -1,0 +1,35 @@
+.full-width-table {
+  width: 100%;
+}
+
+.map-table{
+  width: 100%;
+  margin-right: 0%;
+  text-align: center;
+  box-shadow: none;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  overflow-y: scroll;
+  max-height: 700px;
+}
+
+th {
+  vertical-align: middle!important;
+}
+
+td {
+  padding: 10px!important;
+}
+
+.mat-row.selected {
+  background: rgb(161, 147, 147);
+}
+
+.mat-row:hover {
+  border-color: gray;
+  background: rgb(161, 147, 147);
+}
+
+.row {
+  width: 1500px;
+}

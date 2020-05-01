@@ -1,0 +1,14 @@
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]">
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="stripe"></div>

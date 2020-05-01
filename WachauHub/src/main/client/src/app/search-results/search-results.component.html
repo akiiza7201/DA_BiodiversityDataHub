@@ -1,0 +1,36 @@
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container-fluid container">
+  <div class="row justify-content-center" style="height: 20%;">
+    <div class="col-sm-9" style="background-color:lightgray; border: 1px solid darkgrey">
+      <div class="col-sm-9" style="height: 30%; margin-top: 50px;">
+        <input type="text" value="{{searched}}" class="search-input" style="height: 70%; width: 75%;" #input>
+        <button style="height: 70%; width: 15%; margin-left: 3px;" (click)="search(input.value)">Suche</button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center" style="height: 80%;">
+    <div class="col-sm-9" style="background-color:white; border: 1px solid darkgrey">
+      <mat-list>
+        <ng-container *ngFor="let species of speciesList | slice: lowValue : highValue">
+          <mat-list-item style="margin-left: 5%;">
+            <p mat-line style="font-weight:bold;">{{species.scientificName}} | {{species.vernacularName}}</p>
+            <p mat-line>{{species.dataResourceUid}}</p>
+            <button (click)="showProfile(species.uuid)" style="float: right; margin-top: 5%; margin-right: 5%;">mehr</button>
+           </mat-list-item>
+          <mat-divider></mat-divider>
+          </ng-container>
+      </mat-list>
+    </div>
+      <mat-paginator style="height: 7%; float: right;" [length]="speciesList.length" [pageSize]="pageSize"
+      (page)="getPaginatorData($event)">
+      </mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.table, .speciestable {
+    width: 25%;
+    margin-left: 0%;
+    float: left;
+}
+
+.map {
+  width:40%;
+  height: 60%;
+  padding-left: 100px;
+  min-height: 400px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+/* Media Query for mobile only */
+@media (max-width: 768px) {
+    .table, .map, .speciestable{
+        width: 100%;
+    }
+    #mapbox {
+        min-height: 500px;
+    }
+}
